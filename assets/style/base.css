@@ -8,10 +8,13 @@
     --app-orange: #ff833c;
     --app-blue: #3c57ff;
     --app-blue-hover: #364ee6;
+    --app-branding: #0F3460;
 }
 
 body {
-    background-color: var(--app-dark-bg);
+    background-image: url(../img/lake\ louise.jpg) ;
+    background-size: cover;
+    /* background-color: var(--app-branding); */
 }
 
 body,
@@ -60,8 +63,15 @@ ul li {
 
 .calculator {
     width: 400px;
+    border-radius: 8px;
+    background-color: var(--app-branding);
+    padding: 6px;
+    text-align: center;
+
+}
+.center {
     display: grid;
-    margin: auto;
+    place-items: center;
 
 }
 
@@ -92,6 +102,7 @@ form input+input {
 input:focus {
     border: 1px solid rgba(255, 255, 255, .25);
 }
+
 
 input[type="button"] {
     width: 120px;
@@ -143,6 +154,6 @@ input[type="button"]:hover {
 .reset.is-visible {
     visibility: visible;
     opacity: 1;
-    transition-delay: 0.7s;
+    transition-delay: 0.3s;
 
 }

@@ -47,13 +47,13 @@ function randm() {
     return num;
 }
 
+let b = randm();
 onEvent('click', btn, function () {
 
     let a = numberOne.value;
     let c = 50;
-
+    
     if (isNumber(a)) {
-        let b = randm();
         if (count < 1) {
             again();
             ending.innerText = `Please restart the Game`;
@@ -62,16 +62,17 @@ onEvent('click', btn, function () {
 
             count = 4;
         } else if (a > c || a < 1) {
-            output.innerText = `Choose between 1 - 50 ${count}`;
+            output.innerText = `Choose between ${b}1 - 50 ${count}`;
             count = 4;
         } else if ((a == b)) {
+            count = 1;
             output.innerText = `Congratulations You won: `;
             numberOne.value = '';
             again();
         } else if (a < b) {
-            output.innerText = `Your number is smaller: You have ${count} chances`;
+            output.innerText = `Your number is smaller: ${b}You have ${count} chances`;
         } else if (a > b) {
-            output.innerText = `Your number is greater: You have ${count} chances `;
+            output.innerText = `Your number is greater: ${b}You have ${count} chances `;
 
         }
         count--;
@@ -83,11 +84,11 @@ onEvent('click', btn, function () {
 });
 
 onEvent('click', reset, function () {
+    randm();
     output.innerText = '';
     numberOne.value = '';
     ending.innerText = '';
     count = 4;
-    randm();
     reset.classList.remove('is-visible');
 
 });;
