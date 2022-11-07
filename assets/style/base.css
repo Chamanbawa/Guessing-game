@@ -12,9 +12,12 @@
 }
 
 body {
-    background-image: url(../img/lake\ louise.jpg) ;
-    background-size: cover;
-    /* background-color: var(--app-branding); */
+background-color: var(--app-dark-bg); 
+}
+
+body.winner {
+    background: url(../img/giphy.gif) center center / cover no-repeat;
+    
 }
 
 body,
@@ -25,7 +28,7 @@ p {
 .container {
     width: min(100% - 30px, 1280px);
     margin-inline: auto;
-    height: 100vh;
+    height: 80vh;
 }
 
 h1,
